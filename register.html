@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register-Kmrc</title>
+  <link rel="stylesheet" href="HomeStyle.css" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-content">
+      <img src="icons/7.png" alt="KMRC" class="logo" />
+    </div>
+  </header>
+
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Create Your Account</h2>
+      <p>Sign up to access user work</p>
+
+      <div id="errors" style="color:red; margin-bottom:15px;"></div>
+
+      <!-- IMPORTANT: action="/register" posts to your server route -->
+      <form id="register-form" action="/register" method="post">
+        <div class="input-group">
+          <label for="firstName">👤 First Name</label>
+          <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required />
+        </div>
+
+        <div class="input-group">
+          <label for="lastName">👤 Last Name</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required />
+        </div>
+
+        <div class="input-group">
+          <label for="jobRole">👷 Job Role</label>
+          <input type="text" id="jobRole" name="jobRole" placeholder="Enter your job role" required />
+        </div>
+
+        <div class="input-group">
+          <label for="phoneNumber">📱 Phone Number</label>
+          <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required />
+        </div>
+
+        <div class="input-group">
+          <label for="email">📧 Email</label>
+          <input type="email" id="email" name="email" placeholder="Use your email (example@gmail.com)" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">🔑 Password</label>
+          <div class="password-container">
+            <input type="password" id="password" name="password" placeholder="Minimum 6 characters" required />
+            <span class="toggle-password" onclick="togglePassword()">👁️</span>
+          </div>
+        </div>
+
+        <button type="submit" class="login-btn">Register</button>
+        <p class="register-text">Already have an account? <a href="/login">Login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 KMRC. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function togglePassword() {
+      const pwd = document.getElementById("Password");
+      pwd.type = pwd.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>

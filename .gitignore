@@ -1,0 +1,14 @@
+node_modules/
+.env
+.DS_Store
+npm-debug.log*
+yarn-error.log
+*.log
+coverage/
+dist/
+# macOS
+.Icon?
+.Spotlight-V100
+.Trashes
+# VSCode
+.vscode/
